@@ -1,12 +1,10 @@
-# Responsible for publishing new social actiosn to the Git Repo
+# Responsible for publishing new social actions to the Git Repo
 import os
 # GitPython
 from git import Repo
 class GitPublisher:
     def __init__(self, repo_path: str):
-        # repo_path: path to the Git repository reoot
-        # currently this is the project root: ELEC4712_Decentralised_Blog/
-        # but we will need to modify it to have separate repo with actions and profile etc alone
+        # repo_path: path to the Git repository root
         self.repo_path = repo_path
         self.repo = self.load_or_init_repo()
     

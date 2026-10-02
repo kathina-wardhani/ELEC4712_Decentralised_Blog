@@ -110,8 +110,7 @@ class ActionBase:
         public_key = profile["publicKey"]
         handle = profile["handle"]
 
-        # Load identiy.json
-        #project_root = os.path.dirname(os.path.dirname(__file__))  # ELEC4712_Decentralised_Blog/
+        # Load identity.json
         project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
         identity_json_path = os.path.join(project_root, "client", "identity.json")
 

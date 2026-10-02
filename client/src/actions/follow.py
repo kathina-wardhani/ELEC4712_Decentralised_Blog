@@ -3,7 +3,6 @@ import git
 import json
 from src.actions.base import ActionBase
 from src.discovery.profile_verifier import ProfileVerifier
-from src.replication.follow_manager import FollowManager
 
 
 class FollowAction(ActionBase):
@@ -12,8 +11,8 @@ class FollowAction(ActionBase):
         obj["target"] = target
         return obj
 
-    def create_follow(self, target_repo_url):
-        return self._create("follow", target=target_repo_url)
+    def create_follow(self, target_public_key):
+        return self._create("follow", target=target_public_key)
 
     # -------------------------------------------------------
     # Git-native profile.json fetch (AFTER remote + fetch)

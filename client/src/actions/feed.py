@@ -188,7 +188,6 @@ class ShowFeedAction(ActionBase):
 
                 if discovered_pk and discovered_handle:
                     self.pubkey_to_handle.setdefault(discovered_pk, discovered_handle)
-                    #self.pubkey_to_handle[discovered_pk] = discovered_handle
 
             except Exception as e:
                 print(

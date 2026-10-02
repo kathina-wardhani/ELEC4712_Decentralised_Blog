@@ -3,7 +3,6 @@
 # Before adding CLI commands, or Git integration
 import argparse
 import os
-import json
 
 # Import identity modules
 from src.actions.feed import ShowFeedAction
@@ -21,7 +20,6 @@ from src.replication.git_publisher import GitPublisher
 from src.replication.replicator import Replicator
 
 from src.utils.identity_loader import load_identity
-from src.replication.follow_manager import FollowManager
 from src.publishing.publish_manager import PublishManager
 from src.publishing.site_publisher import SitePublisher
 
