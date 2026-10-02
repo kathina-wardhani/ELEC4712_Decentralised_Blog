@@ -79,13 +79,4 @@ class FollowAction(ActionBase):
         path, obj = self.create_follow(target_public_key)
         print(f"[FOLLOW] Created follow action at {path}")
 
-        # Step 5: Commit + push
-        repo.git.add(A=True)
-        try:
-            repo.index.commit(f"Follow {handle}")
-        except:
-            print("[FOLLOW] Nothing to commit")
-
-        repo.remotes.origin.push()
-        print("[FOLLOW] Pushed follow action to origin")
         return path, obj
